@@ -1,0 +1,155 @@
+p {
+    color: rgb(143, 39, 13);
+}
+body {
+    background-color: darkgrey;    
+}
+h1 {font-size: 2em;
+}
+.content-box {
+    padding: 30px;
+    margin: 30px;
+    background-color: lightblue;
+    border: 5px solid lightblue;
+}
+table {
+    width:100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border:3px solid black;
+    padding: 15px;
+    text-align: center;
+}
+th {
+    background-color: darkgrey;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: bold;
+    Text-decoration: underline;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 9px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: darkgrey;
+    color: rgb(4, 4, 4);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: green;
+}
+
+.transition-button {
+    padding: 20px 30px;
+    background-color: lightblue;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.8s ease;
+}
+.transition-button:hover {
+    background-color: lightcoral;
+}
+
+.animation-box {
+    width: 50px;
+    height: 50px;
+    background-color: lightgreen;
+    position: relative;
+    animation: move 2s infinite alternate;
+}
+@keyframes move {
+    from {
+        left: 0;
+    }
+    to{
+        left:100px;
+    }
+}
+
+.pseudo-list li:nth-child(odd) {
+    background-color: lightblue;
+}
+.pseudo-list li:nth-child(even) {
+    background-color: lightgreen;
+}
+
+.filter-image {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+.filter-image:hover {
+    filter: grayscale(0%);
+}
+
+.quote {
+    position: relative;
+    padding-left: 20px;
+    font-style: italic;
+}
+
+.quote::before {
+    content: '"';
+    font-size: 40px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    color: red;
+}
+
+.grib-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.grid-item {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box {
+    background-color: lightblue;
+    padding: 10px;
+    text-align: center;
+}
+
+.responsive-box {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .responsive-box {
+        background-color: lightblue;
+    }
+}
+
+@media (min-width: 601px) {
+    .responsive-box {
+        background-color: lightgreen;
+    }
+}
